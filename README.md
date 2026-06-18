@@ -1,50 +1,64 @@
-# Website Thiệp Cưới - Thanh Tùng & Quế Trân 
+# Website Thiệp Cưới — Thanh Tùng & Quế Trân
 
-Website thiệp mời cưới được thiết kế đẹp mắt với các hiệu ứng animation và tương tác.
+Website thiệp mời cưới trực tuyến với giao diện thanh lịch, animation mượt mà và đầy đủ thông tin lễ cưới.
 
-## 🌐 Triển khai
+## Triển khai
 
-Website được triển khai tại: 
+Website được triển khai tại: *(chưa cập nhật)*
 
-## 📁 Cấu trúc dự án
+## Cấu trúc dự án
 
 ```
-wedding/
-├── index.html          # Trang chính
-├── style.css           # Stylesheet chính
-├── style2.css          # Stylesheet bổ sung
-├── js.js               # JavaScript cho animations và tương tác
-├── source/             # Thư mục chứa assets
-│   ├── doc/           # Hình ảnh thiệp
-│   ├── ngang/         # Hình ảnh ngang và QR code
-│   ├── music.mp3      # Nhạc nền
-│   └── ...
-└── README.md          # File này
+tran-tung-wedding/
+├── index.html                  # Trang chính
+├── style.css                   # Stylesheet
+├── main.js                     # JavaScript (animations, đếm ngược, nhạc)
+├── favicon.png                 # Icon tab trình duyệt
+├── public/
+│   ├── files/
+│   │   └── music.mp3           # Nhạc nền
+│   └── images/
+│       ├── chu-re.jpg          # Ảnh chú rể
+│       ├── co-dau.jpg          # Ảnh cô dâu
+│       ├── pin_map.svg         # Icon bản đồ
+│       ├── volume.svg          # Icon âm thanh
+│       ├── thank.svg           # Hình ảnh cảm ơn
+│       └── albums/
+│           ├── img1.jpg        # Ảnh album cưới 1
+│           └── img2.jpg        # Ảnh album cưới 2
+└── README.md
 ```
 
-## ✨ Tính năng
+## Tính năng
 
-- Thiệp mời với animation đẹp mắt
-- Album ảnh cưới với hiệu ứng scroll
-- Form xác nhận tham dự (Google Forms)
-- QR code gửi quà mừng
-- Nhạc nền tự động phát
+- Hero section với animation cánh hoa rơi
+- Đồng hồ đếm ngược đến ngày cưới
+- Giới thiệu chú rể & cô dâu
+- Thư mời trân trọng với thông tin sự kiện
+- Album ảnh cưới dạng grid
+- Bản đồ Google Maps đến địa điểm tổ chức
+- Nút bật/tắt nhạc nền
+- Hiệu ứng scroll reveal (reveal-up, reveal-left, reveal-right, reveal-scale)
+- Tối ưu font chống FOUT (Flash of Unstyled Text)
 - Responsive design cho mobile
-- Link Google Maps đến địa điểm tổ chức
 
-## 🎨 Công nghệ sử dụng
+## Công nghệ sử dụng
 
 - HTML5
-- CSS3 (animations, transitions)
+- CSS3 (animations, transitions, CSS custom properties)
 - Vanilla JavaScript
-- Google Fonts (Alex Brush, Montserrat, Noto Serif Display)
+- Google Fonts: Alex Brush, Cormorant Garamond, Montserrat, Noto Serif Display
+- Google Maps Embed API
 
-## 📅 Thông tin sự kiện
+## Thông tin sự kiện
 
-- **Ngày:** Chủ Nhật, 20.09.2026 (Tức Ngày 10 Tháng 8 Năm Ất Tỵ)
-- **Giờ:** 11h00
-- **Địa điểm:** GIA ĐÌNH NHÀ TRAI - Gia Tân  - Xã Gia Lộc - Huyện Trảng Bàng - Tỉnh Tây Ninh
+| Thông tin | Chi tiết |
+|-----------|----------|
+| Ngày | Chủ Nhật, 20/09/2026 |
+| Âm lịch | Ngày 10 Tháng 08 Năm Bính Ngọ |
+| Giờ | 11:00 |
+| Địa điểm | Tổ 19, Khu phố Gia Tân, Phường Gia Lộc, Tỉnh Tây Ninh |
 
-## 👤 Tác giả
+## Tác giả
 
-Website by Pham Thanh Tung
+Website by **Pham Thanh Tung**
