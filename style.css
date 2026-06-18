@@ -281,10 +281,11 @@ html, body {
 }
 
 .thiep_main_date {
+    flex: 1 !important; /* Ép chia đều 1/3 độ rộng */
     color: #e91e63 !important;
     font-size: 48px;
     font-weight: bold;
-    padding: 0 10px;
+    text-align: center !important;
     line-height: 40px;
 }
 
@@ -326,20 +327,23 @@ hr, .album_header .line {
 
 .thiep_date_row {
     display: flex !important;
-    justify-content: center !important;
+    justify-content: space-between !important;
     align-items: center !important;
     width: 100% !important;
+    max-width: 350px !important; /* Giữ cho tổng thể không bị giãn quá to trên màn hình máy tính */
+    margin: 0 auto !important;
     gap: 15px !important;
 }
 
 .thiep_item {
+    flex: 1 !important; /* Ép chia đều 1/3 độ rộng */
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
 }
 
 .thiep_item hr {
-    width: 100% !important;
+    width: 100% !important; /* Đường kẻ tự động dài bằng 1/3 khối đó */
     margin: 5px 0 !important;
 }
 
