@@ -2,9 +2,7 @@
     font-family: "Alex Brush", cursive;
     font-weight: 500;
     font-style: normal;
-    /* font-size: 36px; */
 }
-
 
 .font_newsreader {
     font-family: "Newsreader", serif;
@@ -30,7 +28,7 @@
     font-weight: 400;
     font-style: normal;
     font-variation-settings:
-    "wdth" 100;
+            "wdth" 100;
 }
 
 #audioIndicator {
@@ -43,23 +41,16 @@
     border-radius: 50%;
     cursor: pointer;
     user-select: none;
-  }
+}
 
-  #audioIndicator > img {
+#audioIndicator > img {
     display: block;
-  }
+}
 
 /* HTML................................................................. */
-
 html {
     scroll-behavior: smooth;
-    background-color:#f0f8ff;
-
     overflow-x: hidden;
-    /* overflow-y: hidden; */
-    /* scrollbar-width: none;
-    -ms-overflow-style: none;
-    height: 0px; */
 }
 
 * {
@@ -90,15 +81,9 @@ body {
 }
 
 @keyframes zoomInOut {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
 .thiep::before {
@@ -150,88 +135,13 @@ body {
 
 .thiep_name > p {
     text-transform: uppercase;
-    
 }
 
 .thiep_small {
     font-size: 20px;
 }
 
-/* Phần 2....................................................... */
-.thiep_date_box {
-    margin-top: 36px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: white;
-}
-
-.hr-wrapper {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 1px;
-    background-color: white;
-    border: white;
-    width: 200px;
-}
-
-.thiep_space {
-    height: 32px;
-}
-
-.thiep_date_row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.thiep_item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    width: max-content;
-}
-
-.thiep_item hr {
-    width: 100%;
-    border: none;
-    border-top: 1px solid white;
-    margin: 2px 0;
-}
-
-.thiep_item span {
-    font-size: 14px;
-    letter-spacing: 1px;
-    line-height: 22px;
-}
-
-.padding_day {
-    padding: 0 12px;
-}
-
-.padding_hour {
-    padding: 0 12px;
-}
-
-.thiep_main_date {
-    font-size: 48px;
-    font-weight: bold;
-    padding: 0 10px;
-    line-height: 40px;
-}
-
-.thiep_month_year {
-    margin-top: 10px;
-    font-size: 16px;
-    letter-spacing: 1px;
-}
-
-/* phần 3 */
+/* Phần 3 */
 .thiep_add {
     position: relative;
     display: flex;
@@ -256,23 +166,13 @@ body {
     letter-spacing: 0.5px;
 }
 
-.hr-add {
-    margin-top: 18px;
-    height: 1px;
-    background-color: white;
-    width: 200px; /* giống hr-wrapper */
-    margin-left: auto;
-    margin-right: auto;
-    border: none;
-}
-
 .thiep_all_icon {
     display: block;
     margin: 16px 0;
 }
 
 .thiep_map {
-    display: block; /* Đảm bảo ảnh nền hiển thị */
+    display: block;
     width: 16px;
     height: 16px;
     display: flex;
@@ -314,16 +214,19 @@ body {
     font-weight: bold;
     margin-bottom: 16px;
     color: #712f00;
-    
 }
 
 .gt_img {
     position: relative;
     width: 90%;
-    aspect-ratio: 1 / 1; /* cắt vuông */
+    aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 20px;
     margin-bottom: 18px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.6s ease-out, transform 1.6s ease-out;
+    will-change: transform, opacity;
 }
 
 .gt_img img {
@@ -334,20 +237,6 @@ body {
     display: block;
 }
 
-/* .caption {
-    position: absolute;
-    bottom: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-shadow: 1px 1px 4px black;
-    z-index: 1;
-} */
-
-
-/* ani 2 ảnh.................................................................... */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -359,14 +248,106 @@ body {
     }
 }
 
-.gt_img {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1.6s ease-out, transform 1.6s ease-out;
-    will-change: transform, opacity;
-}
-
 .gt_img.show {
     animation: fadeInUp 1.8s ease forwards;
 }
 
+/* =========================================
+   GIAO DIỆN TONE HỒNG VÀ ÉP CĂN GIỮA (Đã dọn từ HTML sang)
+   ========================================= */
+
+/* Đổi màu nền toàn bộ trang web sang hồng phấn */
+html, body {
+    background-color: #fff0f4 !important;
+    background-image: none !important;
+}
+
+.thiep_blur-bg, .gt_container, .moi_container, .thank_container, .album_container {
+    background-color: #fff0f4 !important;
+}
+
+.cf_container {
+    background-color: #ffffff !important;
+    border: 2px solid #ff99bb !important;
+    box-shadow: 0 8px 25px rgba(233, 30, 99, 0.15) !important;
+}
+
+.font_fancy, .map_header, .album_header span {
+    color: #e91e63 !important;
+}
+
+.font_thanh_dam, .thiep_name p, .gt_des, .gt_des2, .moi_desc2, .moi_desc3, .cf_desc1, .cf_desc2, .cf_desc3, .cf_desc4, .thiep_month_year {
+    color: #ad1457 !important;
+}
+
+.thiep_main_date {
+    color: #e91e63 !important;
+    font-size: 48px;
+    font-weight: bold;
+    padding: 0 10px;
+    line-height: 40px;
+}
+
+.thiep_month_year {
+    margin-top: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+hr, .album_header .line {
+    border-top: 1px solid #ff99bb !important;
+    border-color: #ff99bb !important;
+    background-color: #ff99bb !important;
+}
+
+.padding_day { padding: 0 12px; font-size: 14px; letter-spacing: 1px; line-height: 22px;}
+.padding_hour { padding: 0 12px; font-size: 14px; letter-spacing: 1px; line-height: 22px;}
+
+.cf_btn {
+    background-color: #ff4081 !important;
+    color: #ffffff !important;
+    border: 1px solid #f50057 !important;
+    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4) !important;
+}
+.cf_btn a { color: #ffffff !important; text-decoration: none;}
+.cf_btn:hover { background-color: #f50057 !important; }
+#copy-toast { background-color: #e91e63 !important; }
+
+/* --- PHẦN CANH CHỈNH GIỮA (CENTER) CHUẨN XÁC CHO NGÀY THÁNG & ĐỊA ĐIỂM --- */
+.thiep_date_box, .thiep_add {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin-top: 36px;
+}
+
+.thiep_date_row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 15px !important;
+}
+
+.thiep_item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.thiep_item hr {
+    width: 100% !important;
+    margin: 5px 0 !important;
+}
+
+.hr-wrapper, .hr-add {
+    width: 250px !important;
+    max-width: 80% !important;
+    margin: 15px auto !important;
+    position: static !important;
+    transform: none !important;
+    border: none;
+}

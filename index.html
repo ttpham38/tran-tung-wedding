@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Thanh Tùng & Quế Trân</title>
+
     <link rel="stylesheet" href="./style.css?v=19.9">
     <link rel="stylesheet" href="./style2.css?v=19.9">
-    <script src="js.js?v=19.9"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,107 +16,35 @@
     <meta property="og:description" content="Thiệp mời dự Lễ Thành Hôn"/>
     <meta property="og:image" content="./tran-tung-wedding/source/ngang/z7947565248143_9e39e1ed9334b6210cd22008d3fe0c50.jpg" />
     <meta property="og:type" content="website" />
-    <!-- // -->
+
     <link rel="icon" href="source/favicon.png" type="image/png">
     <link rel="preload" as="image" href="./source/doc/back_thiep.svg" />
     <link rel="preload" as="audio" href="./source/music.mp3" type="audio/mpeg" />
     <link rel="preload" as="image" href="./source/doc/cam_anh.svg" />
     <link rel="preload" as="image" href="./source/doc/xanh_chi.svg" />
-
-    <!-- ĐOẠN CSS ĐỔI SANG TONE MÀU HỒNG TƯƠI TẮN ĐÃ TỐI ƯU CHO GIAO DIỆN PC -->
-    <style>
-        /* Đổi màu nền toàn bộ trang web (phủ kín 2 bên lề trên máy tính) sang hồng phấn */
-        html, body {
-            background-color: #fff0f4 !important;
-            background-image: none !important; /* Xóa hình nền xanh mặc định nếu có */
-        }
-
-        /* Nền các khu vực nội dung chính */
-        .thiep_blur-bg, .gt_container, .moi_container, .thank_container, .album_container {
-            background-color: #fff0f4 !important;
-        }
-
-        /* Khung Lễ Thành Hôn (hộp ở giữa) chuyển sang nền trắng, viền hồng và bóng hồng */
-        .cf_container {
-            background-color: #ffffff !important;
-            border: 2px solid #ff99bb !important;
-            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.15) !important;
-        }
-
-        /* Đổi màu font chữ kiểu (Save the Date, Thư mời...) sang hồng rực rỡ */
-        .font_fancy, .map_header, .album_header span {
-            color: #e91e63 !important;
-        }
-
-        /* Đổi màu các text chính (Tên, Địa chỉ, Lời mời) sang hồng đậm/đỏ đô để dễ đọc */
-        .font_thanh_dam, .thiep_name p, .gt_des, .gt_des2, .moi_desc2, .moi_desc3, .cf_desc1, .cf_desc2, .cf_desc3, .cf_desc4, .thiep_month_year {
-            color: #ad1457 !important;
-        }
-
-        /* Đổi màu ngày tháng năm (số 20) */
-        .thiep_main_date {
-            color: #e91e63 !important;
-        }
-
-        /* Đổi màu các đường kẻ ngang (HR) và viền */
-        hr, .hr-wrapper, .hr-add {
-            border-top: 1px solid #ff99bb !important;
-            border-color: #ff99bb !important;
-        }
-        .album_header .line {
-            background-color: #ff99bb !important;
-        }
-
-        /* Đổi màu Nút bấm (Xác nhận tham dự, Gửi quà mừng) */
-        .cf_btn {
-            background-color: #ff4081 !important;
-            color: #ffffff !important;
-            border: 1px solid #f50057 !important;
-            box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4) !important;
-        }
-        .cf_btn a {
-            color: #ffffff !important;
-        }
-        .cf_btn:hover {
-            background-color: #f50057 !important;
-        }
-
-        /* Đổi màu nền của thông báo "Đã copy" */
-        #copy-toast {
-            background-color: #e91e63 !important;
-        }
-    </style>
-
 </head>
 
-
+<body>
 <audio id="myAudio" autoplay loop>
     <source src="./source/music.mp3" type="audio/mpeg">
     Trình duyệt của bạn không hỗ trợ audio.
 </audio>
 
-
-
-<body>
 <div id="audioIndicator">
     <img src="./source/volume.svg" alt="">
-
 </div>
-<!-- thiệp -->
+
 <div class="thiep">
     <div class="thiep_blur-bg">
         <div class="thiep_container">
-            <!-- Phần 0 -->
             <div class="thiep_des">
                 <p class="font_fancy">Save the Date</p>
             </div>
-            <!-- Phần 1 -->
             <div class="thiep_name">
                 <p class="font_thanh_dam">Thanh Tùng</p>
                 <p class="font_thanh_dam thiep_small">&</p>
                 <p class="font_thanh_dam">Quế Trân</p>
             </div>
-            <!-- Phần 2 -->
             <div class="thiep_date_box font_thanh_dam">
                 <hr class="hr-wrapper">
                 <div class="thiep_space"></div>
@@ -135,8 +63,6 @@
                 </div>
                 <div class="thiep_month_year">09.2026</div>
             </div>
-
-            <!-- Phần 3 -->
             <div class="thiep_add">
                 <p class="font_fancy add_fancy">Địa điểm tổ chức</p>
                 <p class="font_thanh_dam add_big">GIA ĐÌNH NHÀ TRAI</p>
@@ -144,19 +70,13 @@
                 <p class="font_thanh_dam add_small">Thị xã Trảng Bàng, Tỉnh Tây Ninh </p>
                 <hr class="hr-add">
             </div>
-
-            <!-- phần icon -->
             <div class="thiep_all_icon">
                 <a class="thiep_map" href="https://maps.app.goo.gl/8PneQdf6pngRFZFKA" target="_blank" rel="noopener noreferrer">
                     <img src="./source/pin_map.svg" alt="Chỉ đường">
                 </a>
             </div>
-
-
         </div>
-
     </div>
-
 </div>
 
 <div class="gt_container">
@@ -164,17 +84,12 @@
     <div class="gt_des2 font_thanh_dam"> Chú Rể và Cô Dâu </div>
     <div class="gt_img">
         <img src="./source/DSCF1282.JPG" alt="">
-        <!-- <p class="caption font_thanh_dam"></p> -->
     </div>
     <div class="gt_img">
-        <img src="./source/tran.JPG" alt="">
-        <!-- <p class="caption font_thanh_dam">Quế Trân</p> -->
+        <img src="./source/DSCF1228.JPG" alt="">
     </div>
-
 </div>
 
-
-<!-- Mời -->
 <div class="moi_container">
     <div class="moi_desc1 font_fancy">Thư mời</div>
     <div class="moi_desc2 font_tnr">Tham dự Lễ cưới của Thanh Tùng & Quế Trân</div>
@@ -183,23 +98,26 @@
         <img class="img_big js_center" src="./source/doc/xanh_2.svg" alt="">
         <img class="img_small js_r js_right" src="./source/doc/xanh_3_lat.svg" alt="">
     </div>
-
-    <div class="moi_desc3 font_tnr">   Tình yêu là nguồn sáng soi rọi mọi khoảnh khắc.
+    <div class="moi_desc3 font_tnr">Tình yêu là nguồn sáng soi rọi mọi khoảnh khắc.
         Và những khoảnh khắc ấy đã trở thành vĩnh cửu khi chúng tôi quyết định dành
         trọn quãng đời còn lại bên nhau. Chúng tôi, bằng cả tấm lòng, xin chân thành
         mời bạn đến chung vui trong ngày lễ trọng đại này. Sự hiện diện của bạn sẽ
         làm cho ngày vui của chúng tôi càng thêm phần ý nghĩa!</div>
 </div>
 
-<!-- confirm -->
 <div class="cf_container nhay-shadow">
     <div class="cf_desc1">Lễ Thành Hôn</div>
     <div class="cf_desc2">Chủ Nhật | 11h00</div>
     <div class="cf_desc3">20.09.2025</div>
     <div class="cf_desc4">(Tức Ngày 10 Tháng 08 Năm Bính Ngọ)</div>
+    <button class="cf_btn font_tnr">
+        <a href="https://forms.gle/7zeeJpgnDbF1wN2F8">Xác nhận tham dự</a>
+    </button>
+    <button class="cf_btn js_qr font_tnr">
+        Gửi quà mừng
+    </button>
 </div>
 
-<!-- pop-up -->
 <div class="popup">
     <div class="popup_container hide-horizontal-scrollbar">
         <div class="popup_item popup_item1">
@@ -212,7 +130,7 @@
         </div>
     </div>
 </div>
-<!-- album -->
+
 <div id="copy-toast">Đã copy!</div>
 
 <div class="album_header">
@@ -226,26 +144,20 @@
     <img class="js_album album_left" src="./source/ngang/do_n.svg" alt="">
     <img class="js_album album_left" src="./source/doc/xanh_2.svg" alt="">
     <img class="js_album album_left" src="./source/doc/cam_2.svg" alt="">
-    <!-- <img class="js_album album_left" src="./source/doc/cam_3.svg" alt=""> -->
     <img class="js_album album_right" src="./source/doc/xanh_3.svg" alt="">
     <img class="js_album album_right" src="./source/doc/do.svg" alt="">
     <img class="js_album album_right" src="./source/ngang/xam_n.svg" alt="">
     <img class="js_album album_right" src="./source/doc/cam_4.svg" alt="">
     <img class="js_album album_right" src="./source/doc/xam_3.svg" alt="">
-    <!-- <img class="js_album album_right" src="./source/doc/cam_5.svg" alt=""> -->
     <img class="js_album album_right" src="./source/ngang/z7947565248143_9e39e1ed9334b6210cd22008d3fe0c50.jpg" alt="">
-
 </div>
 
-<!-- Thanks -->
 <div class="thank_container">
-
     <div class="thank_desc">
         <img src="./source/thank.svg" alt="">
         <p>Rất hân hạnh được đón tiếp!</p>
     </div>
 
-    <!-- Bản đồ Google Maps -->
     <div class="map_container" style="text-align: center; margin: 30px auto; width: 100%; box-sizing: border-box; padding: 0 10px;">
         <div class="map_header font_fancy" style="font-size: 2.5rem; color: #333; margin-bottom: 20px;">Bản đồ đường đi</div>
         <div style="overflow: hidden; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
@@ -265,91 +177,7 @@
         © 06/2026 Website by Pham Thanh Tung|
     </div>
 </div>
+
+<script src="js.js?v=19.9"></script>
 </body>
 </html>
-
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        const items = document.querySelectorAll('.thiep_item');
-        const container = document.querySelector('.thiep_date_box');
-        if (items.length === 2 && container) {
-            const left = items[0].getBoundingClientRect().left;
-            const right = items[1].getBoundingClientRect().right;
-            const containerLeft = container.getBoundingClientRect().left;
-            const width = right - left;
-
-            const hr = document.querySelector('.hr-wrapper');
-            hr.style.width = width + 'px';
-            hr.style.left = (left - containerLeft) + 'px';
-            hr.style.transform = 'none';
-
-            const hr_add = document.querySelector('.hr-add');
-            hr_add.style.width = width + 'px';
-            hr_add.style.left = (left - containerLeft) + 'px';
-            hr_add.style.transform = 'none';
-        }
-    });
-
-    const btn_qr = document.querySelector('.js_qr')
-    const pop_up = document.querySelector('.popup')
-    const pop_up_ctn = document.querySelector('.popup_container')
-    const pop_up_item1 = document.querySelector('.popup_item1')
-    const pop_up_item2 = document.querySelector('.popup_item2')
-
-    function show_pop_up() {
-        pop_up.classList.add('show')
-    }
-
-    function hide_pop_up() {
-        pop_up.classList.remove('show')
-    }
-
-    btn_qr.addEventListener('click', show_pop_up)
-    pop_up.addEventListener('click', hide_pop_up)
-    pop_up_item1.addEventListener('click', function(event) {
-        event.stopPropagation();
-    })
-    pop_up_item2.addEventListener('click', function(event) {
-        event.stopPropagation();
-    })
-
-
-    // xử lý kích thước pop up
-    const items = document.querySelectorAll('.popup_item');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            const ratio = entry.intersectionRatio; // 0 -> 1
-            const value = 0.8 + 0.2 * ratio; // map từ 0.5 -> 1
-            entry.target.style.opacity = value.toFixed(2);
-            entry.target.style.transform = `scale(${value.toFixed(2)})`;
-        });
-    }, {
-        root: document.querySelector('.popup_container'),
-        threshold: Array.from({ length: 101 }, (_, i) => i / 100)
-    });gửi
-
-    items.forEach(item => observer.observe(item));
-
-
-    // copyyyyyyyyyyy
-    function showToast() {
-        const toast = document.getElementById('copy-toast');
-        toast.classList.add('show');
-        setTimeout(() => {
-            toast.classList.remove('show');
-        }, 1000);
-    }
-
-    document.querySelectorAll('.copy').forEach(copyBtn => {
-        copyBtn.addEventListener('click', function () {
-            const text = this.dataset.copy;
-            navigator.clipboard.writeText(text).then(() => {
-                showToast();
-                console.log(`Đã copy: ${text}`);
-            }).catch(err => {
-                console.error('Copy thất bại: ', err);
-            });
-        });
-    });
-</script>
