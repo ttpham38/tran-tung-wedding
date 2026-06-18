@@ -139,6 +139,16 @@ a   { text-decoration: none; color: inherit; }
     box-shadow: 0 6px 24px var(--shadow);
 }
 
+/* Nút nhấp nháy khi đang chờ người dùng tương tác lần đầu */
+#musicBtn.waiting {
+    animation: musicPulse 2s ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+    0%, 100% { box-shadow: 0 4px 16px var(--shadow); }
+    50%       { box-shadow: 0 0 0 8px rgba(201, 169, 110, 0.2), 0 4px 16px var(--shadow); }
+}
+
 .music-icon {
     display: flex;
     align-items: flex-end;
@@ -530,6 +540,10 @@ a   { text-decoration: none; color: inherit; }
     text-align: center;
     animation: heartBeat 2s ease-in-out infinite;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
 }
 
 @keyframes heartBeat {
@@ -651,6 +665,31 @@ a   { text-decoration: none; color: inherit; }
     color: var(--text);
     letter-spacing: 0.03em;
     line-height: 1.8;
+}
+
+@media (max-width: 480px) {
+    .invite__event-box {
+        padding: 18px 14px;
+    }
+
+    .invite__event-title {
+        font-size: 1rem;
+        letter-spacing: 0.06em;
+    }
+
+    .invite__event-date {
+        font-size: 0.8rem;
+        letter-spacing: 0.02em;
+        line-height: 1.7;
+    }
+
+    .invite__event-lunar {
+        font-size: 0.68rem;
+    }
+
+    .invite__event-loc {
+        font-size: 0.75rem;
+    }
 }
 
 /* ══════════════════════════════════════════

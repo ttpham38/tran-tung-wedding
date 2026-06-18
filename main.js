@@ -4,44 +4,59 @@
 // NHẠC NỀN
 // ══════════════════════════════════════════
 (function initMusic() {
-    const audio  = document.getElementById('bgAudio');
-    const btn    = document.getElementById('musicBtn');
+    const audio = document.getElementById('bgAudio');
+    const btn   = document.getElementById('musicBtn');
     if (!audio || !btn) return;
 
     let playing = false;
+    const EVENTS = ['click', 'scroll', 'touchstart', 'keydown', 'pointerdown'];
+
+    function setPlaying(state) {
+        playing = state;
+        btn.classList.toggle('playing', state);
+        // Bỏ trạng thái "chờ tương tác" khi đã phát được
+        btn.classList.toggle('waiting', !state);
+    }
 
     function tryPlay() {
+        audio.volume = 0.7;
         audio.play()
-            .then(() => {
-                playing = true;
-                btn.classList.add('playing');
-            })
-            .catch(() => {});
+            .then(() => setPlaying(true))
+            .catch(() => {
+                // Trình duyệt chặn → chờ tương tác người dùng
+                setWaitingForInteraction();
+            });
+    }
+
+    function setWaitingForInteraction() {
+        btn.classList.add('waiting');
+        // Hiện tooltip nhỏ gợi ý bấm để bật nhạc
+        btn.setAttribute('title', 'Bấm để bật nhạc 🎵');
+
+        function onFirstInteraction() {
+            EVENTS.forEach(e => window.removeEventListener(e, onFirstInteraction));
+            if (!playing) tryPlay();
+        }
+
+        EVENTS.forEach(e => window.addEventListener(e, onFirstInteraction, { once: true }));
     }
 
     function togglePlay() {
         if (playing) {
             audio.pause();
-            playing = false;
-            btn.classList.remove('playing');
+            setPlaying(false);
         } else {
             tryPlay();
         }
     }
 
-    btn.addEventListener('click', togglePlay);
-
-    // Tự động phát khi người dùng tương tác lần đầu
-    const autoPlay = () => {
-        if (!playing) tryPlay();
-        ['click', 'scroll', 'touchstart', 'keydown'].forEach(e => {
-            window.removeEventListener(e, autoPlay);
-        });
-    };
-
-    ['click', 'scroll', 'touchstart', 'keydown'].forEach(e => {
-        window.addEventListener(e, autoPlay, { once: true });
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation(); // không trigger onFirstInteraction
+        togglePlay();
     });
+
+    // Lớp 1: thử autoplay ngay khi DOM sẵn sàng (hoạt động nếu user đã từng vào site)
+    tryPlay();
 })();
 
 // ══════════════════════════════════════════
