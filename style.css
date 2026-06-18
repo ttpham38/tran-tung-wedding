@@ -1,0 +1,372 @@
+.font_fancy{
+    font-family: "Alex Brush", cursive;
+    font-weight: 500;
+    font-style: normal;
+    /* font-size: 36px; */
+}
+
+
+.font_newsreader {
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.font_tnr {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.font_montserrat{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.font_thanh_dam {
+    font-family: "Noto Serif Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+#audioIndicator {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 4;
+    background-color: #fdfaf2;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  #audioIndicator > img {
+    display: block;
+  }
+
+/* HTML................................................................. */
+
+html {
+    scroll-behavior: smooth;
+    background-color:#f0f8ff;
+
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    /* scrollbar-width: none;
+    -ms-overflow-style: none;
+    height: 0px; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thiep {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.thiep::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(./source/doc/back_thiep.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: zoomInOut 10s ease-in-out infinite;
+    z-index: 0;
+    transform-origin: center;
+}
+
+.thiep_blur-bg {
+    position: relative;
+    width: 92%;
+    margin: 4%;
+    border-radius: 20px;
+    background: #7d7d7d45;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.thiep_container {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+.thiep_des {
+    margin: 18px;
+    margin-bottom: 24px;
+    font-size: 30px;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.thiep_name {
+    margin: 36px 0;
+    font-size: 36px;
+}
+
+.thiep_name > p {
+    text-transform: uppercase;
+    
+}
+
+.thiep_small {
+    font-size: 20px;
+}
+
+/* Phần 2....................................................... */
+.thiep_date_box {
+    margin-top: 36px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+.hr-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    background-color: white;
+    border: white;
+    width: 200px;
+}
+
+.thiep_space {
+    height: 32px;
+}
+
+.thiep_date_row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.thiep_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: max-content;
+}
+
+.thiep_item hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid white;
+    margin: 2px 0;
+}
+
+.thiep_item span {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+
+.padding_day {
+    padding: 0 12px;
+}
+
+.padding_hour {
+    padding: 0 12px;
+}
+
+.thiep_main_date {
+    font-size: 48px;
+    font-weight: bold;
+    padding: 0 10px;
+    line-height: 40px;
+}
+
+.thiep_month_year {
+    margin-top: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* phần 3 */
+.thiep_add {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 18px;
+}
+
+.add_fancy {
+    font-size: 20px;
+}
+
+.add_big {
+    margin-top: 8px;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.add_small {
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+}
+
+.hr-add {
+    margin-top: 18px;
+    height: 1px;
+    background-color: white;
+    width: 200px; /* giống hr-wrapper */
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+}
+
+.thiep_all_icon {
+    display: block;
+    margin: 16px 0;
+}
+
+.thiep_map {
+    display: block; /* Đảm bảo ảnh nền hiển thị */
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 12px;
+    margin: 0 auto;
+}
+
+.thiep_map:hover {
+    border: 1px solid rgb(125, 125, 125);
+}
+
+.thiep_map > img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Giới thiệu */
+.gt_container {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.gt_des {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.gt_des2 {
+    text-transform: uppercase;
+    font-weight: 500 !important;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #712f00;
+    
+}
+
+.gt_img {
+    position: relative;
+    width: 90%;
+    aspect-ratio: 1 / 1; /* cắt vuông */
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 18px;
+}
+
+.gt_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+/* .caption {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px black;
+    z-index: 1;
+} */
+
+
+/* ani 2 ảnh.................................................................... */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gt_img {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.6s ease-out, transform 1.6s ease-out;
+    will-change: transform, opacity;
+}
+
+.gt_img.show {
+    animation: fadeInUp 1.8s ease forwards;
+}
+
