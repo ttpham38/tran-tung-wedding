@@ -1,6 +1,6 @@
 # Website Thiệp Cưới — Thanh Tùng & Quế Trân
 
-Website thiệp mời cưới trực tuyến với giao diện thanh lịch, animation mượt mà và đầy đủ thông tin lễ cưới.
+Website thiệp mời cưới trực tuyến nhà trai với giao diện thanh lịch, animation mượt mà và đầy đủ thông tin lễ cưới.
 
 ## Triển khai
 
