@@ -214,10 +214,10 @@ a   { text-decoration: none; color: inherit; }
     justify-content: center;
     overflow: hidden;
     background:
-        radial-gradient(ellipse 80% 60% at 50% 0%,  #f5ece0 0%, transparent 60%),
-        radial-gradient(ellipse 60% 80% at 0%  100%, #fceee8 0%, transparent 50%),
-        radial-gradient(ellipse 60% 80% at 100% 100%,#f0ede5 0%, transparent 50%),
-        #faf8f3;
+            radial-gradient(ellipse 80% 60% at 50% 0%,  #f5ece0 0%, transparent 60%),
+            radial-gradient(ellipse 60% 80% at 0%  100%, #fceee8 0%, transparent 50%),
+            radial-gradient(ellipse 60% 80% at 100% 100%,#f0ede5 0%, transparent 50%),
+            #faf8f3;
 }
 
 /* Hoa rơi */
@@ -693,7 +693,7 @@ a   { text-decoration: none; color: inherit; }
 }
 
 /* ══════════════════════════════════════════
-   ALBUM
+   ALBUM (ĐÃ CẬP NHẬT LAYOUT PINTEREST)
 ══════════════════════════════════════════ */
 .album {
     padding: 80px 24px;
@@ -703,7 +703,7 @@ a   { text-decoration: none; color: inherit; }
 .album__grid {
     display: block;
     column-count: 2; /* Chia làm 2 cột */
-    column-gap: 12px; /* Khoảng cách giữa 2 cột ngang */
+    column-gap: 12px; /* Khoảng cách ngang */
     max-width: 700px;
     margin: 0 auto;
 }
@@ -712,25 +712,21 @@ a   { text-decoration: none; color: inherit; }
     overflow: hidden;
     border-radius: var(--radius-sm);
     box-shadow: 0 4px 20px var(--shadow);
-    margin-bottom: 12px; /* Khoảng cách dọc giữa các ảnh */
-    break-inside: avoid; /* Tránh lỗi ảnh bị cắt đôi đẩy sang cột bên kia */
-    display: inline-block; /* Bắt buộc đi kèm break-inside để fix lỗi Safari */
+    margin-bottom: 12px; /* Khoảng cách dọc */
+    break-inside: avoid; /* Tránh cắt đôi ảnh qua cột mới */
+    display: inline-block; /* Bắt buộc để break-inside hoạt động tốt */
     width: 100%;
 }
 
 .album__item--large {
-    column-span: all; /* Ảnh lớn sẽ tự động tràn đủ 2 cột */
+    column-span: all;
 }
 
 .album__item img {
     width: 100%;
-    height: auto; /* Giữ trọn vẹn tỷ lệ, không mất đầu */
+    height: auto; /* Ảnh full tỉ lệ gốc, không bị cắt */
     display: block;
     transition: transform 0.6s ease;
-}
-
-.album__item:hover img {
-    transform: scale(1.04);
 }
 
 .album__item:hover img { transform: scale(1.04); }
@@ -855,7 +851,9 @@ a   { text-decoration: none; color: inherit; }
 
     .countdown__item { min-width: 56px; }
 
-    .album__grid { gap: 8px; }
+    /* Cập nhật khoảng cách album trên mobile cho đồng bộ layout Pinterest */
+    .album__grid { column-gap: 8px; }
+    .album__item { margin-bottom: 8px; }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
@@ -867,7 +865,6 @@ a   { text-decoration: none; color: inherit; }
 
     .hero { border-radius: 0 0 32px 32px; }
 
-    .album__grid {
-        grid-template-columns: repeat(12, 1fr);
-    }
+    /* Fix nhỏ để layout masonry hiển thị ổn định trên PC */
+    .album__grid { column-count: 2; }
 }
